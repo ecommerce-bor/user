@@ -2,8 +2,11 @@ package com.user.service.registration.entity;
 
 import jakarta.annotation.Generated;
 import jakarta.persistence.*;
+import lombok.*;
 
 @Entity
+@NoArgsConstructor
+@Data
 public class User {
 
     @Id
