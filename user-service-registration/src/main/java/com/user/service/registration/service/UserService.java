@@ -29,6 +29,20 @@ public class UserService {
       if(user.isPresent()){
           return user.get();
       }
-        throw new UserNotFoundException("user not found with id:"+id+"please try with different user id");
+        throw new UserNotFoundException("user not found with id:"+id+" please try with different user id ");
+    }
+
+    public long countUsers(){
+        return userRepository.count();
+    }
+
+    public User updateUser(User user){
+        return userRepository.save(user);
+    }
+
+    public String deletedUserById(Integer id){
+        findUserById(id);
+        userRepository.deleteById(id);
+        return  "deleted user by id "+ id ;
     }
 }
