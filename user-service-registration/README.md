@@ -22,3 +22,16 @@ GET  http://localhost:8080/user/count
 
 DELETE  http://localhost:8080/user/{id}
 
+1.created springboot application which consist of parent pom and handle all dependencies version without conflict and it eliminates manual of version conflicts.
+
+2.It will provide tomcat server internally.
+
+3.It will provide auto configuraion via application.properties we have provided data base user name and url and password.
+
+4.It internally uses hikari pool we can can change the hikari pool min,max,idle connction settings.
+
+5.Actuator will provide production ready made features like health, metrics application like
+a.http://localhost:8080/actuator/metrics
+b.http://localhost:8080/actuator/metrics/hikaricp.connections.max
+c.http://localhost:8080/actuator/health
+

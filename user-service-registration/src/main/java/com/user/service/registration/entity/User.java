@@ -22,6 +22,6 @@ public class User {
     @Email(regexp = "[a-z0-9._%+-]+@[a-z0-9.-]+\\.[a-z]{2,3}", flags = Pattern.Flag.CASE_INSENSITIVE)
     private String email;
 
-    @Range(min = 10, max = 10, message = "Mobile number must be exactly 10 digits.")
-    private Long mobileNumber;
+    @Size(min = 10, max = 10, message = "Mobile number must be 10 digits long")
+    private String mobileNumber;
 }
